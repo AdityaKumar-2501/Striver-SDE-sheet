@@ -66,8 +66,8 @@ int main(){
     //     }
     //     cout<<endl;
     // }
+    
 
     // 7th pattern
-
     return 0;
 }
