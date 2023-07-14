@@ -67,7 +67,84 @@ int main(){
     //     cout<<endl;
     // }
     
-
     // 7th pattern
+
+    // for(int i = 1 ; i <= 5 ;i++){
+    //     for(int j = 0; j<5-i;j++){
+    //         cout<<" ";
+    //     }
+        
+    //     for(int k = 0 ; k < 2*i -1; k++){
+    //         cout<<"*";
+    //     }
+    //     for(int j = 0; j<5-i;j++){
+    //         cout<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // 8th pattern
+
+    // for(int i = 5 ; i >=1;i--){
+    //     for(int j = 5-i; j>0;j--){
+    //         cout<<" ";
+    //     }
+        
+    //     for(int k =2*i-1 ; k >0; k--){
+    //         cout<<"*";
+    //     }
+    //     for(int j = 5-i; j>0;j--){
+    //         cout<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+    
+    // 9th pattern
+
+    //  for(int i = 1 ; i <= 5 ;i++){
+    //     for(int j = 0; j<5-i;j++){
+    //         cout<<" ";
+    //     }
+        
+    //     for(int k = 0 ; k < 2*i -1; k++){
+    //         cout<<"*";
+    //     }
+    //     for(int j = 0; j<5-i;j++){
+    //         cout<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+    // for(int i = 5 ; i >=1;i--){
+    //     for(int j = 5-i; j>0;j--){
+    //         cout<<" ";
+    //     }
+        
+    //     for(int k =2*i-1 ; k >0; k--){
+    //         cout<<"*";
+    //     }
+    //     for(int j = 5-i; j>0;j--){
+    //         cout<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // 10th pattern 
+
+    for (int i = 1; i <= 5; i++)
+    {
+        for(int j = 0; j <i; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int i =4; i>= 1; i--){
+        for(int j = i; j > 0;j--){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+
+
     return 0;
 }
