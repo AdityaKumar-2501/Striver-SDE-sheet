@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 /*
@@ -12,7 +12,8 @@ Pattern Rules
 
 */
 
-int main(){
+int main()
+{
     // 1st pattern
 
     // for(int i = 0 ; i < 5;i++){
@@ -31,7 +32,7 @@ int main(){
     //     cout<<endl;
     // }
 
-    //3rd pattern
+    // 3rd pattern
 
     // for(int i = 1 ; i <= 5;i++){
     //     for(int j = 1 ; j <=i;j++){
@@ -40,8 +41,8 @@ int main(){
     //     cout<<endl;
     // }
 
-    // 4th pattern 
-    
+    // 4th pattern
+
     // for(int i = 1 ; i <= 5;i++){
     //     for(int j = 1 ; j <=i;j++){
     //         cout<<i;
@@ -58,7 +59,7 @@ int main(){
     //     cout<<endl;
     // }
 
-    // 6th pattern 
+    // 6th pattern
 
     // for(int i = 5 ; i >=1 ;i--){
     //     for(int j = 1 ; j<=i;j++){
@@ -66,14 +67,14 @@ int main(){
     //     }
     //     cout<<endl;
     // }
-    
+
     // 7th pattern
 
     // for(int i = 1 ; i <= 5 ;i++){
     //     for(int j = 0; j<5-i;j++){
     //         cout<<" ";
     //     }
-        
+
     //     for(int k = 0 ; k < 2*i -1; k++){
     //         cout<<"*";
     //     }
@@ -89,7 +90,7 @@ int main(){
     //     for(int j = 5-i; j>0;j--){
     //         cout<<" ";
     //     }
-        
+
     //     for(int k =2*i-1 ; k >0; k--){
     //         cout<<"*";
     //     }
@@ -98,14 +99,14 @@ int main(){
     //     }
     //     cout<<endl;
     // }
-    
+
     // 9th pattern
 
     //  for(int i = 1 ; i <= 5 ;i++){
     //     for(int j = 0; j<5-i;j++){
     //         cout<<" ";
     //     }
-        
+
     //     for(int k = 0 ; k < 2*i -1; k++){
     //         cout<<"*";
     //     }
@@ -118,7 +119,7 @@ int main(){
     //     for(int j = 5-i; j>0;j--){
     //         cout<<" ";
     //     }
-        
+
     //     for(int k =2*i-1 ; k >0; k--){
     //         cout<<"*";
     //     }
@@ -128,7 +129,7 @@ int main(){
     //     cout<<endl;
     // }
 
-    // 10th pattern 
+    // 10th pattern
 
     // for (int i = 1; i <= 5; i++)
     // {
@@ -143,7 +144,7 @@ int main(){
     //     }
     //     cout<<endl;
     // }
-    
+
     // 11th pattern
 
     // for(int i = 1; i <=5;i++){
@@ -164,7 +165,7 @@ int main(){
     // {
     //     for (int j = 1; j <= i; j++)
     //     {
-    //         cout<<j; 
+    //         cout<<j;
     //     }
     //     for(int j = 2*(5-i); j>0;j--){
     //         cout<<" ";
@@ -182,21 +183,87 @@ int main(){
     // {
     //     for (int j = 0; j < i; j++)
     //     {
-    //         cout<< k++ << " "; 
+    //         cout<< k++ << " ";
     //     }
     //     cout<<endl;
     // }
-    
+
     // 14th pattern
 
-    char s = 'A';
+    // char s = 'A';
 
-    for(int i = 1;i<=5;i++){
-        for(int j =0;j<i;j++){
-            cout<<s++;
-        }
-        cout<<endl;
-        s = 'A';
-    }
+    // for(int i = 1;i<=5;i++){
+    //     for(int j =0;j<i;j++){
+    //         cout<<s++;
+    //     }
+    //     cout<<endl;
+    //     s = 'A';
+    // }
+
+    // 15th pattern
+
+    // char s = 'A';
+
+    // for(int i = 5;i>=1;i--){
+    //     for(int j =0;j<i;j++){
+    //         cout<<s++;
+    //     }
+    //     cout<<endl;
+    //     s = 'A';
+    // }
+
+    // 16th pattern
+
+    // char s = 'A';
+
+    // for(int i = 1;i<=5;i++){
+    //     for(int j =0;j<i;j++){
+    //         cout<<s;
+    //     }
+    //     cout<<endl;
+    //     s++;
+    // }
+
+    // 17th pattern
+
+    // for (int i = 1; i <= 5; i++)
+    // {
+    //     for (int j = 0; j < 5 - i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     char ch = 'A';
+    //     int breakpoint = (2 * i - 1) / 2;
+    //     for (int j = 1; j <= 2 * i - 1; j++)
+    //     {
+
+    //         cout << ch;
+    //         if (j <= breakpoint)
+    //             ch++;
+    //         else
+    //             ch--;
+    //     }
+
+    //     for (int j = 0; j < 5 - i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // 18th pattern
+
+    // for(int i=0;i<5;i++){
+    //         for(char ch =('A'+5-1)-i;ch<=('A'+5-1);ch++){
+              
+    //           cout<<ch<<" ";
+    //       }
+    //         cout<<endl;
+    //     }
+
+    // 19th pattern
+    
+
     return 0;
 }
