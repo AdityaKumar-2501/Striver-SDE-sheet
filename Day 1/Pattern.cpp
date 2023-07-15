@@ -198,7 +198,5 @@ int main(){
         cout<<endl;
         s = 'A';
     }
-
-
     return 0;
 }
