@@ -130,21 +130,74 @@ int main(){
 
     // 10th pattern 
 
-    for (int i = 1; i <= 5; i++)
-    {
-        for(int j = 0; j <i; j++){
-            cout<<"*";
-        }
-        cout<<endl;
-    }
-    for(int i =4; i>= 1; i--){
-        for(int j = i; j > 0;j--){
-            cout<<"*";
-        }
-        cout<<endl;
-    }
+    // for (int i = 1; i <= 5; i++)
+    // {
+    //     for(int j = 0; j <i; j++){
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+    // for(int i =4; i>= 1; i--){
+    //     for(int j = i; j > 0;j--){
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
     
+    // 11th pattern
 
+    // for(int i = 1; i <=5;i++){
+    //     for(int j = 1; j <=i;j++){
+    //         if((i+j)%2 ==0){
+    //             cout<<"1 ";
+    //         }
+    //         else{
+    //             cout<<"0 ";
+    //         }
+    //     }
+    //     cout<<endl;
+    // }
+
+    // 12th pattern
+
+    // for (int i = 1; i <= 5; i++)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout<<j; 
+    //     }
+    //     for(int j = 2*(5-i); j>0;j--){
+    //         cout<<" ";
+    //     }
+    //     for(int j = 1; j <= i ; j++){
+    //         cout<<i-j+1;
+    //     }
+    //     cout<<"\n";
+    // }
+
+    // 13th pattern
+
+    // int k = 1;
+    // for (int i = 1; i <= 5; i++)
+    // {
+    //     for (int j = 0; j < i; j++)
+    //     {
+    //         cout<< k++ << " "; 
+    //     }
+    //     cout<<endl;
+    // }
+    
+    // 14th pattern
+
+    char s = 'A';
+
+    for(int i = 1;i<=5;i++){
+        for(int j =0;j<i;j++){
+            cout<<s++;
+        }
+        cout<<endl;
+        s = 'A';
+    }
 
     return 0;
 }
