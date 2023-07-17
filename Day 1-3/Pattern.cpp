@@ -256,14 +256,126 @@ int main()
 
     // for(int i=0;i<5;i++){
     //         for(char ch =('A'+5-1)-i;ch<=('A'+5-1);ch++){
-              
     //           cout<<ch<<" ";
     //       }
     //         cout<<endl;
     //     }
 
     // 19th pattern
-    
+    // upper part
+    // for (int i = 5; i >= 1; i--)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int j = 0; j < 2 * (5 - i); j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+    // lower part
+    // for (int i = 1; i <=5; i++)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int j = 0; j < 2 * (5 - i); j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // 20th pattern
+
+    // for (int i = 1; i <=5; i++)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int j = 0; j < 2 * (5 - i); j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // for (int i = 4; i >= 1; i--)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int j = 0; j < 2 * (5 - i); j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // 21th pattern
+
+    // for(int i = 1; i <= 5; i++){
+    //     for(int j = 1; j <= 5; j++){
+    //         if(i == 1 || i == 5){
+    //             cout<<"*";
+    //         }
+    //         else{
+    //             if(j == 1 || j == 5){
+    //                 cout<<"*";
+    //             }
+    //             else cout<<" ";
+    //         }
+    //     }
+    //     cout<<endl;
+    // }
+
+    // 22th pattern
+
+     // Outer loop for no. of rows
+     for(int i=0;i<7/*2*n-1*/;i++){
+         
+         // inner loop for no. of columns.
+         for(int j=0;j<7/*2*n-1*/;j++){
+             
+             // Initialising the top, down, left and right indices of a cell.
+             int top = i;
+             int bottom = j;
+             int right = 6/*2*n-2*/- j;
+             int left = 6/*2*n-2*/ - i;
+             
+             // Min of 4 directions and then we subtract from n
+             // because previously we would get a pattern whose border
+             // has 0's, but we want with border N's and then decreasing inside.
+             cout<<(4 /*n*/ - min(min(top,bottom), min(left,right)))<<" ";
+         }
+         
+         // As soon as the numbers for each iteration are printed, we move to the
+         // next row and give a line break otherwise all numbers
+         // would get printed in 1 line.
+         cout<<endl;
+     }
+
 
     return 0;
 }
