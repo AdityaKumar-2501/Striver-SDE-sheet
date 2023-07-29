@@ -239,7 +239,7 @@ void explainMultiSet(){
     //only a single 1 erased
     ms.erase(ms.find(1));
 
-    ms.erase(ms.find(1), ms.find(1)+2);
+    ms.erase(ms.find(1), ms.end());
 
     //rest functions are same as set
 
@@ -253,6 +253,49 @@ void explainUset(){
      pariticular order it has a better complexity than set in most
       cases, except some when collision happens
     */
+}
+
+void explainMap() {
+    // map stores in key value fashion
+    // where key is unique and sorted
+    // data type of key and value is of any type
+
+    // declearation of map functions
+    map<int,int> mpp;
+    map<int, pair<int,int> > mps;
+    map<pair<int,int>, int> mp;
+
+    mpp[1] = 2;
+    mpp.emplace(3,1);
+    mpp.insert({2,4});
+    mp[{2,3}] = 10;
+
+    mps[1] = {2,3};
+
+
+    for(auto it : mpp){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+
+    cout<<mpp[1]; // give value of  key 1
+    cout<<mpp[5]; // as key 5 is not present so it will give null or 0
+
+    auto it = mpp.find(3);
+    cout<< it->second<< endl;
+
+    auto it = mpp.find(5); // returns mpp.end() as key 5 is not present
+
+    // lower_bound , upper_bound, erase, swap, size,empty are same as above
+
+}
+
+void explainMultimap(){
+    // everything same as map, only it can store multiple keys
+    // only mpp[key] cannot be used here
+}
+
+void explainUnorderedMap(){
+    // same as set, and unordered_Set difference
 }
 
 int main()
