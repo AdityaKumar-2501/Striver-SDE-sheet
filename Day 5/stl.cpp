@@ -132,37 +132,127 @@ void explainStacks()
     st.push(3);
     st.push(3);
     st.emplace(5);
-    cout<<st.top();  // st[2] is invaild
+    cout << st.top(); // st[2] is invaild
     st.pop();
-    cout<<st.top();
-    cout<<st.size();
-    cout<<st.empty();
-    stack<int> st1,st2;
+    cout << st.top();
+    cout << st.size();
+    cout << st.empty();
+    stack<int> st1, st2;
     st1.swap(st2);
-} 
+}
 
-void explainQueue(){
+void explainQueue()
+{
     queue<int> q;
-    q.push(1); // {1}
-    q.push(2); // {1,2}
+    q.push(1);    // {1}
+    q.push(2);    // {1,2}
     q.emplace(3); // {1,2,3}
 
     q.back() += 5;
-    cout<<q.back(); //prints 8
+    cout << q.back(); // prints 8
 
     // q is {1,2,8}
-    cout<<q.front(); //prints 1
+    cout << q.front(); // prints 1
 
     q.pop(); // {2,9}
 
-    cout<<q.front(); //prints 2
+    cout << q.front(); // prints 2
 
     // size swap empty same as stack
 }
 
-void explainPriorityQueue(){
-    priority_queue<int>pq;
+void explainPriorityQueue()
+{
+    // also called Max heap
+    priority_queue<int> pq; // the greatest value is at the top for alphabets greater the lexicographical is at the top
 
+    pq.push(5);
+    pq.push(2);
+    pq.push(10);
+    pq.emplace(8);
+
+    cout << pq.top() << endl; // prints 10
+
+    // size swap empty same as stack
+
+    // Minimum heap (Min Heap)
+
+    priority_queue<int, vector<int>, greater<int>> pq1;
+    pq1.push(5);
+    pq1.push(2);
+    pq1.push(8);
+    pq1.emplace(10);
+
+    cout << pq1.top() << endl; // prints 2
+}
+
+void explainSet()
+{
+    // set have 2 properties
+    // 1. store in Sorted  order(increasing) 2. Unique value
+    set<int> st;
+    st.insert(1);  // {1}
+    st.emplace(2); // {1,2}
+    st.insert(2);  // {1,2,}
+    st.emplace(4); // {1,2,4}
+    st.insert(3);  // {1,2,3,4}
+
+    // begin(), end(), rbegin(), rend(), size(), empty() and swap()  are same as those above
+    auto it = st.find(3);  // returns iterator that points 3
+    auto itr = st.find(6); // as 6 is not present in set
+    // so it returns iterator that points at st.end()
+    st.erase(2); // erase 2
+
+
+    int cnt = st.count(1); // if 1 present then returns 1 as all elements are unique else returns 0
+    auto it = st.find(3);
+    st.erase(it); // it takes constant time
+
+    // (1,2,3,4,5)
+    auto it1 = st.find(2);
+    auto it2 = st.find(4);
+    st.erase(it1, it2);
+    // after erase {1, 4, 5} [first, last)
+    // lower_bound() and upper_bound() function works in the same wayas in vector it does.
+
+    // link to learn upper bound and lower bound
+    // https://www.youtube.com/watch?v=edJ19qIL8WQ
+    auto it = st.lower_bound(2); 
+    auto it2 = st.upper_bound(3);
+}
+
+void explainMultiSet(){
+    // Everything is same as Set
+    // only stores duplicate elements also
+
+    // meas it is sorted but not unique
+
+    multiset<int>ms;
+    ms.insert(1); // {1}
+    ms.insert(1); // {1,1}
+    ms.insert(1); // {1,1,1}
+
+    ms.erase(1); // all 1's are erased
+
+    int cnt = ms.count(1);
+
+    //only a single 1 erased
+    ms.erase(ms.find(1));
+
+    ms.erase(ms.find(1), ms.find(1)+2);
+
+    //rest functions are same as set
+
+}
+
+void explainUset(){
+    unordered_set<int>s;
+    /*
+     lower_bound and upper_bound functions doesn't work, rest all
+     the functions are same as above, it does not store in any 
+     pariticular order it has a better complexity than set in most
+      cases, except some when collision happens
+    */
 }
 
 int main()
